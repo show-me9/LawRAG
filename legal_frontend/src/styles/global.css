@@ -1,0 +1,45 @@
+/* 全局样式 */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary:      #1a3a5c;   /* 深蓝，法律庄重感 */
+  --color-primary-light:#2563a8;
+  --color-accent:       #c8a84b;   /* 金色，权威感 */
+  --color-bg:           #f5f6f8;
+  --color-bg-card:      #ffffff;
+  --color-border:       #e4e7ed;
+  --color-text-primary: #1a1a2e;
+  --color-text-second:  #606266;
+  --color-text-hint:    #909399;
+  --sidebar-width:      220px;
+  --header-height:      56px;
+  --radius:             8px;
+  --shadow-sm:          0 1px 4px rgba(0,0,0,.08);
+  --shadow-md:          0 2px 12px rgba(0,0,0,.10);
+}
+
+html, body, #app {
+  height: 100%;
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d0d3db; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #b0b3bb; }
+
+/* Element Plus 主色覆盖 */
+.el-button--primary {
+  --el-button-bg-color:     var(--color-primary-light);
+  --el-button-border-color: var(--color-primary-light);
+  --el-button-hover-bg-color: var(--color-primary);
+}
